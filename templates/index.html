@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+  {% block content %}
+        <div class="container-lg ">
+           <div class="row ">
+               <div class="  col-lg-2 mt-3 mr-5">
+                   {% for category in catogeris %}
+                   <div class="list-group ">
+                        <a class="list-group-item " href="/?category={{category.id}}" role="tab" aria-controls="home">{{category.Name}}</a>
+                   </div>
+                   {% endfor %}
+               </div>
+                <div class="  row col-lg-9  mr-5 border rounded-sm">
+                    {% for products in product %}
+                    <div class="card mr-3 mt-2" style="width: 18rem;">
+                        <img class="card-img-top" src="{{products.Image.url}}" alt="">
+                    <div class="card-body">
+                        <p class="card-title">{{products.Name}}</p>
+                        <p class="card-text">Rs.{{products.Price}}/</p>
+                        <a href="#" class="btn btn-primary">Add To Card</a>
+                    </div>
+                    </div>
+                    {% endfor %}
+                </div>
+           </div>
+        </div>
+    {% endblock %}

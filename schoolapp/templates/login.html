@@ -1,0 +1,38 @@
+{% load static %}
+{% include "header.html" %}
+{% block content %}
+{#<div class="mt-5" style="background-image: url({% static 'image/school_background.jpg' %}); height: 380px;">#}
+<div class="d-flex flex-row mb-3 d-flex justify-content-center background">
+  <div class="p-lg-5">
+      <div class="card  ml-sm-5" style="width: 18rem; height: 100%;">
+          <div class="card-body">
+            <h5 class="card-title text-center border-bottom-0">Login Here</h5>
+            <form class="" method="post" action="{% url 'login' %}">
+                {% csrf_token %}
+                <div class=" align-items-center">
+                  <div class="col-auto">
+                      <label for="email" class="col-form-label">Email</label>
+                  </div>
+                  <div class="col-auto">
+                      <input type="email" id="email" name="email" class="form-control" aria-describedby="email">
+                  </div>
+                  <div class="col-auto">
+                      <label for="inputPassword6" class="col-form-label">Password</label>
+                  </div>
+                  <div class="col-auto">
+                      <input type="password" name="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+                  </div>
+                      <div class="col-auto">
+                      <input type="submit" value="Submit" class="form-control mt-4 bg-info text-dark" >
+                  </div>
+                </div>
+            </form>
+          </div>
+        </div>
+  </div>
+</div>
+{#</div>#}
+
+
+{% endblock %}
+{% include "footer.html" %}

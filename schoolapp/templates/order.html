@@ -1,0 +1,20 @@
+{% load static %}
+{% include 'header.html' %}
+{% block content %}
+    <div class="d-flex justify-content-center">
+        <form method="POST" enctype="multipart/form-data" >
+        {% csrf_token %}
+            <div class="d-flex flex-row mt-2 ml-2 text-center">
+                <div class="card text-center" style="width: 10rem;">
+                    <img class="mt-2" src="{{product_image.url}}" />
+                  <div class="card-body">
+                       <h5 class="card-title">Rs.{{ product_in_order }}</h5>
+                      <h5 class="card-title">Rs.{{ product_price }}</h5>
+                    <a href="" class="btn btn-primary text-center">Pay Now</a>
+                  </div>
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}
+{% include 'footer.html' %}
