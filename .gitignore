@@ -1,0 +1,11 @@
+venv
+.venv
+.gitignore
+pandas_test.py
+student.dat
+test
+test.py
+templates
+upload
+.idea
+__pycache__
