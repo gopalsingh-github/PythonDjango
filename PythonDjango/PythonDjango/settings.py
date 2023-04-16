@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-@jm$@8d86mu4nvh-5u(yz(1g0^d70o@k*_2-5g&_goyuk-e8+e
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -38,10 +38,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'schoolapp'
+    'schoolapp',
+    'rest_framework'
+]
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:5173'
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -127,9 +132,11 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATIC_DIR= os.path.join(BASE_DIR, 'static')
 
+
+
 API_KEY = "8978b70bfd09d0345512e028c1ce0999"
 AUTH_TOKEN = "afa50b4162a98aefd6faf6b2b64e163e"
 SALT = "e890ff420a0b4b598cc588ba993ca3ca"
 
 MEDIA_URL= '/upload/'
-MEDIA_ROOT = BASE_DIR
+MEDIA_ROOT = os.path.join(BASE_DIR, 'upload/')

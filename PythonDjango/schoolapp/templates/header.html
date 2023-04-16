@@ -1,7 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -9,10 +8,9 @@
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="{% static 'css/newstyle.css' %}">
-{#    <link rel="stylesheet" href="{% static 'image/Blue_shirt.jpg' %}">#}
 </head>
 <body>
-<div class="container-fluid text-center marquee p-3 border-bottom">
+<div class="container-fluid text-center marquee p-3 border-bottom cont ">
   <div class="row ">
       <svg  xmlns="http://www.w3.org/2000/svg" width="100" height="40" fill="currentColor" class=" ml-4 mt-3 bi bi-hospital" viewBox="0 0 16 16">
           <path d="M8.5 5.034v1.1l.953-.55.5.867L9 7l.953.55-.5.866-.953-.55v1.1h-1v-1.1l-.953.55-.5-.866L7 7l-.953-.55.5-.866.953.55v-1.1h1ZM13.25 9a.25.25 0 0 0-.25.25v.5c0 .138.112.25.25.25h.5a.25.25 0 0 0 .25-.25v-.5a.25.25 0 0 0-.25-.25h-.5ZM13 11.25a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5Zm.25 1.75a.25.25 0 0 0-.25.25v.5c0 .138.112.25.25.25h.5a.25.25 0 0 0 .25-.25v-.5a.25.25 0 0 0-.25-.25h-.5Zm-11-4a.25.25 0 0 0-.25.25v.5c0 .138.112.25.25.25h.5A.25.25 0 0 0 3 9.75v-.5A.25.25 0 0 0 2.75 9h-.5Zm0 2a.25.25 0 0 0-.25.25v.5c0 .138.112.25.25.25h.5a.25.25 0 0 0 .25-.25v-.5a.25.25 0 0 0-.25-.25h-.5ZM2 13.25a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5Z"/>
@@ -27,7 +25,6 @@
     <div class=" col mt-4">
         <a href="{% url 'signup' %}" class="text-dark ml-sm-4">Signup</a>
         <a href="{% url 'login' %}" class="text-dark ml-sm-2">Login</a>
-        <a href="{% url 'product' %}" class="text-dark ml-sm-2">Order</a>
 
     </div>
       <marquee class="mt-2" style="color: red" >
